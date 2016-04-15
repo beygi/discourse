@@ -1,0 +1,48 @@
+#banner {
+  float: left;
+  box-shadow: 0px 1px 2px #bbbbbb;
+  border-radius: 4px;
+  top: 190px;
+  left: 10%;
+  z-index: 1;
+  padding: 10px 10px 10px 10px !important;
+  overflow: visible; //hidden;
+  max-height: 400px !important;
+  background-color: white; //#f2d6d6;
+  position: fixed;
+}
+#banner-content {
+  text-align: center;
+}
+#banner .close {
+  color: #606060;
+}
+#banner .lightbox-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 290px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+/* hide first section from anonymous users */
+
+html.anon #banner-content section:first-of-type {
+  display: none;
+}
+html.anon #banner .close {
+  display: none;
+}
+
+/* hide second section from logged in users */
+
+html:not(.anon) #banner-content section:not(:first-of-type) {
+  display: none;
+}
+
+/* hide banner when on topic page */
+
+div.regular #banner {
+  display: none;
+}

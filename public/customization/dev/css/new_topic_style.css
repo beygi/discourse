@@ -1,0 +1,11 @@
+#create-topic.ember-view.btn-default .btn {
+  z-index: 999;
+  transition: all .25s;
+  /*height: 40px;*/
+}
+#create-topic.btn-default {
+  display: none;
+}
+#create-topic.ember-view.btn-default {
+  display: inline-block;
+}
